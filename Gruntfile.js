@@ -85,12 +85,12 @@ module.exports = function(grunt) {
     karma: {
       options: {
         configFile: 'karma.conf.js',
-        reporters: ['progress', 'coverage']
+        reporters: ['spec']
       },
       // Watch configuration
       watch: {
         background: true,
-        reporters: ['progress']
+        reporters: ['spec']
       },
       // Single-run configuration for development
       single: {

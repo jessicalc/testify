@@ -3,8 +3,7 @@ module.exports = function(config) {
     // base path, that will be used to resolve files and exclude
     basePath: './',
 
-    frameworks: ['mocha', 'chai'
-],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
     // list of files / patterns to load in the browser
     files: require('./include.conf.js').concat([
@@ -19,7 +18,8 @@ module.exports = function(config) {
 
     // progress reporter: lists each test run and whether they pass/fail
     // coverage reporter: creates coverage reports for every tested browser
-    reporters: ['progress', 'coverage'],
+    // reporters: ['spec', 'progress', 'coverage'],
+    reporters: ['spec'],
 
     // web server port
     port: 9876,
@@ -65,8 +65,9 @@ module.exports = function(config) {
     plugins: [
       'karma-coverage',
       'karma-mocha',
+      'karma-spec-reporter',
       'karma-chai',
- 
+      'karma-sinon', 
       'karma-chrome-launcher'
     ]
   });
