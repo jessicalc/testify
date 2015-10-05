@@ -19,5 +19,6 @@ describe('API integration', function(){
     server.respond();
     var res = JSON.parse(JSONresponse);
     sinon.assert.calledWith(setupStub, res.todos);
+    sinon.assert.calledOnce(setupStub);
   });
 });
